@@ -7,7 +7,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # MongoDB connection
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://user:pass@cluster/db")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://PythonBotz:Baddie@cluster0.xunylzo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 client = MongoClient(MONGO_URI)
 db = client["ig_api"]
 collection = db["users"]
@@ -36,7 +36,7 @@ def generate_random_methods(username: str):
     return formatted
 
 
-@app.route("/api/ig", methods=["GET"])
+@app.route("/api/meth", methods=["GET"])
 def get_instagram_info():
     username = request.args.get("user", "").strip()
     if not username:
