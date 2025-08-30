@@ -104,6 +104,5 @@ def get_instagram_info():
         }), 500
 
 
-# Vercel handler
-def handler(request, *args, **kwargs):
-    return app(request, *args, **kwargs)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
